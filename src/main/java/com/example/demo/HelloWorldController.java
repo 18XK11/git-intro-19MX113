@@ -12,12 +12,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloWorldController {
 
     @GetMapping
-    public ResponseEntity<String> print(){
+    public ResponseEntity<String> print() {
         return new ResponseEntity<String>("Hello People", HttpStatus.OK);
     }
 
     @GetMapping("{name}")
-    public ResponseEntity<String> printWithName(@PathVariable String name){
-        return new ResponseEntity<String>("Hello "+name, HttpStatus.OK);
+    public ResponseEntity<String> printWithName(@PathVariable String name) {
+        return new ResponseEntity<String>("Hello world , Have a nice day by " + name, HttpStatus.OK);
     }
 }
